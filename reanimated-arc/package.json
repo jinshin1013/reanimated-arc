@@ -1,5 +1,5 @@
 {
-  "name": "@callstack/reanimated-arc",
+  "name": "@jinshin1013/reanimated-arc",
   "version": "0.1.0-alpha.3",
   "license": "MIT",
   "author": "Jakub Mazurek <jakub.mazurek@callstack.com>",
@@ -35,7 +35,7 @@
   "peerDependencies": {
     "react": "*",
     "react-native": "*",
-    "react-native-reanimated": "^1.4.0",
-    "react-native-svg": "^9.13.4"
+    "react-native-reanimated": "^2.6.0",
+    "react-native-svg": "^12.3.0"
   }
 }

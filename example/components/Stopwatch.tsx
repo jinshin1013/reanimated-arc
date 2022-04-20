@@ -10,23 +10,25 @@ const Stopwatch = () => {
   const [stopWatchActive, setStopWatchActive] = useState(false);
 
   useEffect(() => {
-    if (stopWatchActive) {
-      const timeout1 = setTimeout(() => {
-        if (currentTime < 1) {
-          setStopWatchActive(false);
-        } else {
-          setCurrentTime(currentTime - 1);
-        }
-      }, 1000);
-      const timeout2 = setTimeout(() => {
-        setCurrentTimeText(`00:${currentTime < 10 ? '0' : ''}${currentTime}`);
-      }, 150);
-
-      return () => {
-        clearTimeout(timeout1);
-        clearTimeout(timeout2);
-      };
+    if (!stopWatchActive) {
+      return;
     }
+
+    const timeout1 = setTimeout(() => {
+      if (currentTime < 1) {
+        setStopWatchActive(false);
+      } else {
+        setCurrentTime(currentTime - 1);
+      }
+    }, 1000);
+    const timeout2 = setTimeout(() => {
+      setCurrentTimeText(`00:${currentTime < 10 ? '0' : ''}${currentTime}`);
+    }, 150);
+
+    return () => {
+      clearTimeout(timeout1);
+      clearTimeout(timeout2);
+    };
   }, [currentTime, stopWatchActive]);
 
   const startCounting = () => {
