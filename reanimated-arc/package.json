@@ -1,12 +1,12 @@
 {
   "name": "@jinshin1013/reanimated-arc",
-  "version": "0.1.0-alpha.3",
+  "version": "0.1.0-alpha.4",
   "license": "MIT",
   "author": "Jakub Mazurek <jakub.mazurek@callstack.com>",
   "homepage": "https://github.com/callstack/reanimated-arc",
   "description": "Reanimted Arc component that can be used to create circular progress bars with native performance.",
-  "main": "./dist/index.js",
-  "types": "./dist/index.d.ts",
+  "main": "./dist/src/index.js",
+  "types": "./dist/src/index.d.ts",
   "files": [
     "dist"
   ],
